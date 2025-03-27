@@ -1,10 +1,16 @@
 import React from "react";
 import { Volume2, MapPin, FileInput, Map } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import "./Landing.css"; //created this stylesheet separately
 import NoiseNabLogo from "./images/noisenab_logo.jpg";
 
 function Landing() {
+
+  const navigate = useNavigate(); // Hook for navigation
+  const goToMap = () => {
+    navigate("/htmlpage"); // Redirect to the embedded HTML page with the noise map
+  };
+
   return (
     <div className="landing-container">
       <header className="landing-header">
@@ -42,9 +48,17 @@ function Landing() {
             </Link>
             <Link to="/noise-map" className="secondary-button">
               <Map size={20} />
-              Generate Noise Map
+              Explore Noise Map
             </Link>
-          </div>
+            </div>
+            {/* New Noise Map Button using useNavigate */}
+            <div className="hero-buttons-new">
+            <button onClick={goToMap} className="primary-button w-full">
+              <Map size={20} />
+              View Noise Map
+            </button>
+            </div>
+          
         </div>
         <div className="hero-image">
           {/* You can replace this with an actual image or SVG */}

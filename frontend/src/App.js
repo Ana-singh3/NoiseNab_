@@ -15,7 +15,21 @@ function App() {
         <Route path="/enter-noise-data" element={<NoiseDataEntry />} />
         
         {/* Placeholder for the noise map page -*/}
-        <Route path="/noise-map" element={<div>Noise Map Page - Coming Soon</div>} />
+        {/* <Route path="/noise-map" element={<NoiseMap />} /> */}
+
+        {/* Placeholder for the hotspot page -*/}
+        <Route
+          path="/htmlpage"
+          element={
+            <div style={{ width: "100vw", height: "100vh" }}>
+              <iframe
+                src="/map.html"
+                style={{ width: "100%", height: "100%", border: "none" }}
+                title="Hotspot Map"
+              />
+            </div>
+          }
+        />
         
         {/* Redirect any unknown routes back to the landing page */}
         <Route path="*" element={<Navigate to="/" replace />} />

@@ -111,9 +111,19 @@ ul {
 	margin-bottom:2.5rem;
 }
 .hero-buttons {
-	display:flex;
-	gap:1rem;
-}
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: center; 
+	align-items: center;
+  }
+  
+  .hero-buttons-new {
+	display: flex;
+	justify-content: center; 
+	width: 100%; 
+	margin-top: 1rem; 
+  }
 .hero-image {
 	flex:1;
 	display:flex;

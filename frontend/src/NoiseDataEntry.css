@@ -162,6 +162,33 @@ body {
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+}
+/* Add this to your existing CSS file */
+.manual-location-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.manual-location-inputs .manual-location-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.manual-location-inputs .manual-location-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+@media (max-width: 600px) {
+  .manual-location-inputs .manual-location-input {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
 }
 
 /* Noise slider */
